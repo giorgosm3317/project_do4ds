@@ -21,6 +21,9 @@ format:
       - brand
     css: styles.css
     toc: true
+    
+execute:
+  freeze: false
 
 
 
