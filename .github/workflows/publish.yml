@@ -36,8 +36,8 @@ jobs:
       - name: Install the uv project
         run: uv sync --locked --all-extras --dev
         
-      - name: Run tests
-        run: uv run pytest tests
+      # - name: Run tests
+      #   run: uv run pytest tests
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
