@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="a915a447" class="cell" data-execution_count="1">
+<div id="489745c9" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> penguins</span>
@@ -208,7 +208,7 @@ pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/
 </div>
 <section id="get-data" class="level2">
 <h2 class="anchored" data-anchor-id="get-data">Get Data</h2>
-<div id="919c36ae" class="cell" data-execution_count="2">
+<div id="af4c34f4" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> penguins.load_penguins().dropna()</span>
@@ -276,7 +276,7 @@ pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/
 </section>
 <section id="define-model-and-fit" class="level2">
 <h2 class="anchored" data-anchor-id="define-model-and-fit">Define Model and Fit</h2>
-<div id="78170384" class="cell" data-execution_count="3">
+<div id="da7f0364" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> get_dummies(df[[<span class="st">'bill_length_mm'</span>, <span class="st">'species'</span>, <span class="st">'sex'</span>]], drop_first <span class="op">=</span> <span class="va">True</span>)</span>
@@ -288,7 +288,7 @@ pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/
 </section>
 <section id="get-some-information" class="level2">
 <h2 class="anchored" data-anchor-id="get-some-information">Get some information</h2>
-<div id="16398c8c" class="cell" data-execution_count="4">
+<div id="6d02bcd3" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"R^2 </span><span class="sc">{</span>model<span class="sc">.</span>score(X,y)<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -306,7 +306,7 @@ Coefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]</code></p
 </section>
 <section id="turn-into-vetiver-model" class="level2">
 <h2 class="anchored" data-anchor-id="turn-into-vetiver-model">Turn into Vetiver Model</h2>
-<div id="0107d8e4" class="cell" data-execution_count="5">
+<div id="5584c20b" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel</span>
@@ -316,7 +316,7 @@ Coefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]</code></p
 </section>
 <section id="save-to-board" class="level2">
 <h2 class="anchored" data-anchor-id="save-to-board">Save to Board</h2>
-<div id="dbb5a407" class="cell" data-execution_count="6">
+<div id="8dd2cb81" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pins <span class="im">import</span> board_folder</span>
@@ -335,7 +335,7 @@ Coefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]</code></p
 </section>
 <section id="turn-model-into-api" class="level2">
 <h2 class="anchored" data-anchor-id="turn-model-into-api">Turn model into API</h2>
-<div id="55dacdf4" class="cell" data-execution_count="7">
+<div id="7a72dae8" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverAPI</span>
@@ -419,7 +419,7 @@ Coefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]</code></p
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/giorgosm3317\.github\.io\/project_do4ds\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
